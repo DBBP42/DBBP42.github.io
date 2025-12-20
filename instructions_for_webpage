@@ -1,0 +1,93 @@
+These instructions are designed for Claude (or any pure HTML5 + CSS3 front-end developer) to create a responsive, minimalistic webpage for the Slovenian association "Društvo Bistroumnih Bitij Pan-galaksije" (DBBP), inspired by the style of The Hitchhiker's Guide to the Galaxy. The design should evoke a retro-futuristic terminal aesthetic: primarily black background with green text (#000 background, #0f0 green for body text, #ff0 yellow for accents like headers), using a monospace font like 'Courier New'. Keep it simple, clean, and functional—no JavaScript, images (unless absolutely necessary and sourced externally), or external libraries. Focus on semantic HTML5 elements and CSS3 for responsiveness and effects.
+Project Structure (Separate Files)
+Organize the project into separate files for maintainability. Use the following structure:
+
+index.html: The homepage (English by default). This serves as the entry point.
+index-slo.html: The Slovenian version of the homepage.
+about.html: English "About Us" page.
+about-slo.html: Slovenian "About Us" page.
+events.html: English "Events" page.
+events-slo.html: Slovenian "Events" page.
+contact.html: English "Contact" page.
+contact-slo.html: Slovenian "Contact" page.
+styles.css: A single shared CSS file for all pages (linked in each HTML file via <link rel="stylesheet" href="styles.css">).
+Optional: 404.html: A custom 404 page in the Hitchhiker's style (e.g., "Mostly Harmless" error message).
+
+All HTML files should be in the root directory for simplicity. Ensure file names are lowercase and hyphenated for consistency.
+General Design Principles
+
+Responsive Design: Use CSS media queries to ensure mobile-friendliness. Target breakpoints at 768px (tablets/mobile) and below. On mobile, prioritize vertical stacking, larger tap targets, and minimal clutter.
+Minimalistic Style: Sparse layout with plenty of whitespace (or "blackspace" in this dark theme). No unnecessary decorations—focus on readability. Use CSS transitions for subtle hover effects (e.g., color changes).
+Hitchhiker's Guide Aesthetic:
+Body: Black background (#000), green monospace text (#0f0).
+Headers: Yellow (#ff0), uppercase, with subtle borders (e.g., dashed green lines).
+Links: Green, underline on hover, change to yellow on hover.
+Add fun elements like a blinking cursor (via CSS animation) next to the main title.
+Theme: Incorporate subtle references like "Don't Panic" (or Slovenian "Ne Paničari!!!") in the header.
+
+Accessibility: Use semantic tags (e.g., <header>, <nav>, <main>, <footer>). Ensure high contrast (green on black is okay but test with tools if possible). Add lang="en" or lang="sl" to <html> tags accordingly.
+No JS: All interactions (e.g., menu toggle) must use CSS-only techniques like the checkbox hack for mobile menus.
+
+Language Toggle (SLO/ENG)
+
+Implement a small toggle button in the header (e.g., a simple <button> or <a> styled as a button).
+The toggle should switch between English and Slovenian versions by linking to the corresponding page (e.g., from index.html to index-slo.html).
+Style: Small (e.g., 30px wide), green border, yellow text. Position it in the top-right corner of the header.
+Label: "EN/SLO" or use flags/icons if you must (but keep text-based for accessibility: e.g., "English / Slovenščina").
+On click, it redirects to the equivalent page in the other language (e.g., if on about.html, toggle links to about-slo.html).
+Ensure the toggle is visible on all pages and responsive (e.g., smaller on mobile).
+
+Navigational Menu
+
+Desktop/Tablet: A horizontal navigation bar in the header, below the main title. Use <nav> with <ul> and <li> for links. Center-aligned, with green links that turn yellow on hover.
+Mobile: Minimize and make functional. Use the CSS checkbox hack to create a toggleable menu:
+Hide the full menu by default.
+Show a hamburger icon (☰) as a label for a hidden checkbox input.
+When checked, display the menu as a vertical dropdown or slide-in (using CSS display: none/block and transitions).
+The menu should "hide while reading" – but since no JS, it stays open until untoggled. Make it compact to not obstruct content.
+
+Links: Include Home, About, Events, Contact. Each links to the respective HTML file (e.g., <a href="about.html">About</a>). In Slovenian pages, use Slovenian labels (e.g., "Domov", "O nas", "Dogodki", "Kontakt") and link to -slo.html files.
+Special Care: Ensure menu items have sufficient padding for touch (min 44px height). Use position: sticky for the header to keep it at the top on scroll.
+
+Footer Menu for On-Each-Page Navigation
+
+Place a minimalistic footer menu on every page for quick jumps.
+Use <footer> with a smaller <nav> inside: Horizontal list of links (same as main nav: Home, About, Events, Contact).
+Style: Smaller font (0.9em), centered, with green links. On mobile, allow wrapping or stacking if needed.
+Functionality: Provides "quick jumps" to other pages without scrolling back to the header. Add a subtle border-top (green dashed) for separation.
+Include a copyright notice below the menu, e.g., "© 2025 DBBP - Društvo Bistroumnih Bitij Pan-galaksije. Vse pravice pridržane." (with English equivalent on EN pages).
+
+Page Content Guidelines
+
+Header (All Pages):
+<h1> with "Ne Paničari!!!" (or "Don't Panic!!!") in yellow, with blinking cursor.
+Association name below: "Društvo Bistroumnih Bitij Pan-galaksije - DBBP".
+Language toggle button.
+Main navigation.
+
+Main Content:
+Use <main> with max-width 800px, centered.
+Sections with <h2> for subsections (yellow headers).
+Sample content (populate with placeholders; actual content can be added later):
+Home: Welcome message about the association (e.g., "A society for bright minds exploring the pan-galaxy.").
+About: Description of DBBP's mission, inspired by Hitchhiker's themes.
+Events: List of upcoming events (use <ul> or simple table).
+Contact: Form placeholders (but since no JS, just email links or static info).
+
+Translate all content to Slovenian in -slo.html files (e.g., use accurate translations like "Dobrodošli v DBBP").
+
+Footer: Mini nav + copyright.
+
+CSS Implementation Notes
+
+Global Styles: Reset margins/padding, set body styles.
+Media Queries: @media (max-width: 768px) for mobile adjustments (stack nav, smaller fonts).
+Animations: Simple blink for cursor: @keyframes blink { 50% { opacity: 0; } }.
+No External Dependencies: All in styles.css. If needing icons, use Unicode (e.g., hamburger).
+
+Testing and Final Touches
+
+Test responsiveness on different devices (use browser dev tools).
+Ensure cross-browser compatibility (Chrome, Firefox, Safari).
+Validate HTML5 and CSS3 with tools like W3C validator.
+Make it "pan-galactic" fun: Add subtle Hitchhiker's quotes or references in content.
