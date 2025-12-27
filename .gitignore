@@ -10,3 +10,6 @@ Thumbs.db
 
 # Claude Code Configuration
 .claude/
+AGENT.md
+
+copilot-instructions.md

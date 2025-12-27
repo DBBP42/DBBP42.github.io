@@ -537,4 +537,86 @@ blockquote {
     color: black;
     text-decoration: underline;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: black;
+    border-bottom-color: black;
+  }
+
+  .step-card {
+    border: 1px solid black;
+    background-color: transparent !important;
+    color: black;
+    page-break-inside: avoid;
+    box-shadow: none;
+  }
+
+  .step-number {
+    color: black;
+    opacity: 1;
+  }
+  
+  .toc-nav {
+    display: none;
+  }
+}
+
+/* ============================================
+   42 Steps Page Styles
+   ============================================ */
+.intro-section {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.steps-group h3 {
+  border-bottom: 1px dashed var(--border-green);
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  color: var(--accent-yellow);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.step-card {
+  border: 1px solid var(--border-green);
+  padding: var(--spacing-md);
+  position: relative;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  background-color: rgba(0, 20, 0, 0.3);
+}
+
+.step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(15, 240, 15, 0.2);
+  border-color: var(--accent-yellow);
+}
+
+.step-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent-yellow);
+  opacity: 0.5;
+  margin-bottom: var(--spacing-sm);
+}
+
+.step-card p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
 }
