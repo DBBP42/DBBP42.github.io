@@ -8,11 +8,11 @@
    CSS Custom Properties
    ============================================ */
 :root {
-  --bg-black: #000;
-  --text-green: #0f0;
-  --accent-yellow: #ff0;
-  --border-green: #0f0;
-  --font-mono: 'Courier New', Courier, monospace;
+  --bg-dark: #1A1A1A;
+  --text-light: #F5F5F5;
+  --accent-blue: #007BFF;
+  --border-gray: #444444;
+  --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --max-width: 800px;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -35,9 +35,9 @@ html {
 }
 
 body {
-  background-color: var(--bg-black);
-  color: var(--text-green);
-  font-family: var(--font-mono);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-sans);
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
@@ -48,7 +48,7 @@ body {
    Typography
    ============================================ */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
   text-transform: uppercase;
   margin-bottom: var(--spacing-md);
   letter-spacing: 2px;
@@ -56,13 +56,13 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2rem;
-  border-bottom: 2px dashed var(--border-green);
+  border-bottom: 2px dashed var(--border-gray);
   padding-bottom: var(--spacing-sm);
 }
 
 h2 {
   font-size: 1.5rem;
-  border-bottom: 1px dashed var(--border-green);
+  border-bottom: 1px dashed var(--border-gray);
   padding-bottom: var(--spacing-sm);
   margin-top: var(--spacing-lg);
 }
@@ -79,25 +79,25 @@ p {
    Links
    ============================================ */
 a {
-  color: var(--text-green);
+  color: var(--text-light);
   text-decoration: none;
   transition: color var(--transition-speed), text-decoration var(--transition-speed);
 }
 
 a:hover,
 a:focus {
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
   text-decoration: underline;
 }
 
 a:focus {
-  outline: 2px solid var(--accent-yellow);
+  outline: 2px solid var(--accent-blue);
   outline-offset: 2px;
 }
 
 a:active {
-  color: var(--accent-yellow);
-  background-color: rgba(255, 255, 0, 0.15);
+  color: var(--accent-blue);
+  background-color: rgba(0, 123, 255, 0.15);
   text-decoration: underline;
 }
 
@@ -107,8 +107,8 @@ a:active {
 header {
   position: sticky;
   top: 0;
-  background-color: var(--bg-black);
-  border-bottom: 2px solid var(--border-green);
+  background-color: var(--bg-dark);
+  border-bottom: 2px solid var(--border-gray);
   padding: var(--spacing-sm) var(--spacing-md);
   z-index: 1000;
 }
@@ -125,7 +125,7 @@ header {
 
 .panic-message {
   font-size: 2.5rem;
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
   letter-spacing: 3px;
   display: inline-block;
 }
@@ -134,7 +134,7 @@ header {
   display: inline-block;
   width: 10px;
   height: 1.8rem;
-  background-color: var(--text-green);
+  background-color: var(--text-light);
   margin-left: 5px;
   animation: blink 1s step-end infinite;
   vertical-align: middle;
@@ -163,7 +163,7 @@ header {
 }
 
 .site-subtitle {
-  color: var(--text-green);
+  color: var(--text-light);
   font-size: 1rem;
   text-transform: none;
   letter-spacing: 1px;
@@ -179,10 +179,10 @@ header {
   top: var(--spacing-md);
   right: var(--spacing-md);
   padding: 0.3rem 0.6rem;
-  border: 2px solid var(--border-green);
-  background-color: var(--bg-black);
-  color: var(--accent-yellow);
-  font-family: var(--font-mono);
+  border: 2px solid var(--border-gray);
+  background-color: var(--bg-dark);
+  color: var(--accent-blue);
+  font-family: var(--font-sans);
   font-size: 0.8rem;
   cursor: pointer;
   transition: all var(--transition-speed);
@@ -192,14 +192,14 @@ header {
 
 .lang-toggle:hover,
 .lang-toggle:focus {
-  background-color: var(--accent-yellow);
-  color: var(--bg-black);
+  background-color: var(--accent-blue);
+  color: var(--bg-dark);
   text-decoration: none;
 }
 
 .lang-toggle:active {
-  background-color: var(--text-green);
-  color: var(--bg-black);
+  background-color: #0056b3; /* Darker blue for active state */
+  color: var(--bg-dark);
   transform: scale(0.98);
 }
 
@@ -207,7 +207,7 @@ header {
 body[lang="en"] .lang-toggle[href*="slo"]::before,
 body[lang="sl"] .lang-toggle[href*="index.html"]::before {
   content: '→ ';
-  color: var(--text-green);
+  color: var(--text-light);
 }
 
 /* ============================================
@@ -234,27 +234,27 @@ nav ul li {
 nav ul li a {
   display: block;
   padding: 0.3rem 0.6rem;
-  color: var(--text-green);
+  color: var(--text-light);
   border: 1px solid transparent;
   transition: all var(--transition-speed);
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-  color: var(--accent-yellow);
-  border: 1px dashed var(--border-green);
+  color: var(--accent-blue);
+  border: 1px dashed var(--border-gray);
   text-decoration: none;
 }
 
 nav ul li a.active {
-  color: var(--accent-yellow);
-  border-bottom: 2px solid var(--accent-yellow);
+  color: var(--accent-blue);
+  border-bottom: 2px solid var(--accent-blue);
 }
 
 nav ul li a:active {
-  color: var(--accent-yellow);
-  background-color: rgba(255, 255, 0, 0.1);
-  border: 1px solid var(--accent-yellow);
+  color: var(--accent-blue);
+  background-color: rgba(0, 123, 255, 0.1);
+  border: 1px solid var(--accent-blue);
   transform: translateY(1px);
 }
 
@@ -289,7 +289,7 @@ li {
    Footer
    ============================================ */
 footer {
-  border-top: 2px solid var(--border-green);
+  border-top: 2px solid var(--border-gray);
   padding: var(--spacing-lg) var(--spacing-md);
   text-align: center;
   margin-top: auto;
@@ -314,7 +314,7 @@ footer {
 
 .copyright {
   font-size: 0.8rem;
-  color: var(--text-green);
+  color: var(--text-light);
   opacity: 0.7;
   margin-top: var(--spacing-md);
 }
@@ -323,21 +323,21 @@ footer {
    Special Elements
    ============================================ */
 .highlight {
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
 }
 
 .box {
-  border: 2px dashed var(--border-green);
+  border: 2px dashed var(--border-gray);
   padding: var(--spacing-md);
   margin: var(--spacing-md) 0;
 }
 
 blockquote {
-  border-left: 4px solid var(--accent-yellow);
+  border-left: 4px solid var(--accent-blue);
   padding-left: var(--spacing-md);
   margin: var(--spacing-md) 0;
   font-style: italic;
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
 }
 
 /* ============================================
@@ -350,7 +350,7 @@ blockquote {
 
 .error-code {
   font-size: 5rem;
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
   margin-bottom: var(--spacing-md);
 }
 
@@ -365,7 +365,7 @@ blockquote {
   h1 {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-sm);
-    border-bottom: 1px dashed var(--border-green);
+    border-bottom: 1px dashed var(--border-gray);
     padding-bottom: 0.25rem;
   }
 
@@ -424,8 +424,8 @@ blockquote {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--bg-black);
-    border-top: 2px solid var(--border-green);
+    background-color: var(--bg-dark);
+    border-top: 2px solid var(--border-gray);
     border-bottom: none;
     z-index: 1000;
     padding: 0.25rem 0;
@@ -466,7 +466,7 @@ blockquote {
   header {
     position: relative;
     padding: 0.4rem var(--spacing-sm);
-    border-bottom: 1px solid var(--border-green);
+    border-bottom: 1px solid var(--border-gray);
   }
 
   .header-content {
@@ -501,7 +501,7 @@ blockquote {
    Accessibility
    ============================================ */
 :focus-visible {
-  outline: 2px solid var(--accent-yellow);
+  outline: 2px solid var(--accent-blue);
   outline-offset: 2px;
 }
 
@@ -510,8 +510,8 @@ blockquote {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--accent-yellow);
-  color: var(--bg-black);
+  background: var(--accent-blue);
+  color: var(--bg-dark);
   padding: var(--spacing-sm);
   z-index: 100;
 }
@@ -576,10 +576,10 @@ blockquote {
 }
 
 .steps-group h3 {
-  border-bottom: 1px dashed var(--border-green);
+  border-bottom: 1px dashed var(--border-gray);
   padding-bottom: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
 }
 
 .steps-grid {
@@ -589,24 +589,24 @@ blockquote {
 }
 
 .step-card {
-  border: 1px solid var(--border-green);
+  border: 1px solid var(--border-gray);
   padding: var(--spacing-md);
   position: relative;
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-  background-color: rgba(0, 20, 0, 0.3);
+  background-color: #2a2a2a; /* Darker gray for step cards */
 }
 
 .step-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(15, 240, 15, 0.2);
-  border-color: var(--accent-yellow);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3); /* More prominent blue shadow */
+  border-color: var(--accent-blue);
 }
 
 .step-number {
   display: block;
   font-size: 2rem;
   font-weight: bold;
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
   opacity: 0.5;
   margin-bottom: var(--spacing-sm);
 }
