@@ -12,7 +12,8 @@
   --text-light: #F5F5F5;
   --accent-blue: #007BFF;
   --border-gray: #444444;
-  --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Playfair Display', serif;
   --max-width: 800px;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -35,19 +36,22 @@ html {
 }
 
 body {
+  padding: 2vw;
   background-color: var(--bg-dark);
   color: var(--text-light);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   line-height: 1.6;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /*padding: 5px;*/
 }
 
 /* ============================================
    Typography
    ============================================ */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
   color: var(--accent-blue);
   text-transform: uppercase;
   margin-bottom: var(--spacing-md);
@@ -102,20 +106,67 @@ a:active {
 }
 
 /* ============================================
+   Buttons
+   ============================================ */
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: var(--text-light);
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+/* ============================================
    Header
    ============================================ */
+.hero-background {
+  background-image: url('Img/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
 header {
   position: sticky;
   top: 0;
-  background-color: var(--bg-dark);
+  background-color: rgba(26, 26, 26, 0.8); /* Semi-transparent background */
   border-bottom: 2px solid var(--border-gray);
   padding: var(--spacing-sm) var(--spacing-md);
   z-index: 1000;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
 }
 
 .header-content {
   max-width: var(--max-width);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
 }
 
 .site-title {
@@ -123,11 +174,19 @@ header {
   margin-bottom: var(--spacing-sm);
 }
 
+.site-logo {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: var(--spacing-sm);
+  filter: drop-shadow(0 0 5px rgba(0, 123, 255, 0.5));
+}
+
 .panic-message {
   font-size: 2.5rem;
   color: var(--accent-blue);
   letter-spacing: 3px;
   display: inline-block;
+  text-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
 }
 
 .blinking-cursor {
@@ -271,18 +330,39 @@ main {
 
 section {
   margin-bottom: var(--spacing-lg);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ============================================
    Lists
    ============================================ */
-ul, ol {
-  margin-left: var(--spacing-lg);
-  margin-bottom: var(--spacing-md);
+main ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-li {
-  margin-bottom: var(--spacing-sm);
+main ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+main ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
 }
 
 /* ============================================
@@ -327,17 +407,21 @@ footer {
 }
 
 .box {
-  border: 2px dashed var(--border-gray);
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
   padding: var(--spacing-md);
   margin: var(--spacing-md) 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 blockquote {
-  border-left: 4px solid var(--accent-blue);
+  border-left: 2px solid var(--accent-blue);
   padding-left: var(--spacing-md);
   margin: var(--spacing-md) 0;
   font-style: italic;
-  color: var(--accent-blue);
+  color: var(--text-light);
 }
 
 /* ============================================
@@ -362,6 +446,10 @@ blockquote {
     font-size: 16px;
   }
 
+  .hero-background {
+    padding: 2rem 1rem;
+  }
+
   h1 {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-sm);
@@ -370,8 +458,8 @@ blockquote {
   }
 
   .panic-message {
-    font-size: 1.5rem;
-    letter-spacing: 1.5px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
   }
 
   .blinking-cursor {
@@ -394,28 +482,36 @@ blockquote {
 
   /* Small header at top on mobile */
   .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-sm);
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 7px;
+    text-align: left;
+  }
+
+  .site-logo {
+	position: absolute;
+	top: 1vw;
+	left: 1vw;*/
+    margin: 0;
+    max-width: 60px;
+    flex-shrink: 0;
+    z-index: 50;
   }
 
   .site-title {
-    margin-bottom: 0;
+    margin: 0;
+    padding-left: 55px;
     text-align: left;
   }
 
   .lang-toggle {
-    position: static;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.75rem;
-    min-height: 44px;
-    min-width: 44px;
-    vertical-align: middle;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
   }
 
   /* Mobile navigation - sticky to bottom */
@@ -463,14 +559,10 @@ blockquote {
     text-align: center;
   }
 
-  header {
+  header:not(.hero-background) {
     position: relative;
     padding: 0.4rem var(--spacing-sm);
     border-bottom: 1px solid var(--border-gray);
-  }
-
-  .header-content {
-    max-width: 100%;
   }
 
   footer {
@@ -488,6 +580,10 @@ blockquote {
    Tablet adjustments
    ============================================ */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .nav-container {
+    margin: 0;
+  }
+
   nav ul {
     gap: var(--spacing-sm);
   }
@@ -619,4 +715,37 @@ blockquote {
   .steps-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================
+   Cookie Disclaimer
+   ============================================ */
+#cookie-disclaimer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  padding: 1rem;
+  text-align: center;
+  z-index: 2000;
+  display: none; /* Hidden by default */
+}
+#cookie-disclaimer p {
+  margin: 0 0 1rem 0;
+}
+#cookie-disclaimer a {
+  color: var(--accent-blue);
+}
+#cookie-dismiss {
+  background-color: var(--accent-blue);
+  color: var(--bg-dark);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+#cookie-dismiss:hover {
+  background-color: #0056b3;
 }

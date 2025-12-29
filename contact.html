@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Get in touch with DBBP. Join our network, ask questions, or propose collaboration. We're here to build a better Slovenia together.">
   <title>Contact - DBBP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <header>
+  <header class="hero-background">
     <a href="contact-slo.html" class="lang-toggle" aria-label="Switch to Slovenian">SLO</a>
 
     <div class="header-content">
+      <img src="Img/LOGO-favourite.png" alt="DBBP Logo" class="site-logo">
       <div class="site-title">
         <h1>
           <span class="panic-message">Don't Panic!!!</span>
@@ -21,19 +26,20 @@
         </h1>
         <p class="site-subtitle">Društvo Bistroumnih Bitij Pan-galaksije - DBBP</p>
       </div>
-    </div>
-
-    <div class="nav-container">
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="nav-container">
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+            <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
+
+
 
   <main id="main">
     <section>
@@ -129,7 +135,7 @@
       <div class="box">
         <h2>Remember</h2>
         <blockquote>"The ships hung in the sky in much the same way that bricks don't."</blockquote>
-        <p>Sometimes the most important changes happen when we challenge what seems impossible. Get in touch - let's build the future together.</p>
+        <p>Včasih se najpomembnejše spremembe zgodijo, ko izpodbijamo to, kar se zdi nemogoče. Stopite v stik - skupaj gradimo prihodnost.</p>
         <p style="text-align: center;"><span class="highlight">Don't Panic. Just participate.</span></p>
       </div>
     </section>
@@ -138,13 +144,18 @@
   <footer>
     <nav class="footer-nav" aria-label="Footer navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
     </nav>
     <p class="copyright">&copy; 2025 DBBP - Društvo Bistroumnih Bitij Pan-galaksije. All rights reserved.</p>
   </footer>
+  <div id="cookie-disclaimer">
+    <p>We wanted to offer you cookies, but the Vogons took them all. So, this website uses no cookies, not even for analytics. We respect your privacy as much as we fear Vogon poetry. <a href="about.html">Learn more</a>.</p>
+    <button id="cookie-dismiss" class="btn btn-primary">Got it!</button>
+  </div>
+  <script src="scripts.js" defer></script>
 </body>
 </html>
