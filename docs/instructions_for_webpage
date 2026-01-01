@@ -1,4 +1,4 @@
-These instructions are designed for Claude (or any pure HTML5 + CSS3 front-end developer) to create a responsive, minimalistic webpage for the Slovenian association "Društvo Bistroumnih Bitij Pan-galaksije" (DBBP), inspired by the style of The Hitchhiker's Guide to the Galaxy. The design should evoke a retro-futuristic terminal aesthetic: primarily black background with green text (#000 background, #0f0 green for body text, #ff0 yellow for accents like headers), using a monospace font like 'Courier New'. Keep it simple, clean, and functional—no JavaScript, images (unless absolutely necessary and sourced externally), or external libraries. Focus on semantic HTML5 elements and CSS3 for responsiveness and effects.
+These instructions are designed for Claude (or any pure HTML5 + CSS3 front-end developer) to create a responsive, minimalistic webpage for the Slovenian association "Društvo Brihtnih Bitij Pan-galaxije 42" (DBBP42), inspired by the style of The Hitchhiker's Guide to the Galaxy. The design should evoke a retro-futuristic terminal aesthetic: primarily black background with green text (#000 background, #0f0 green for body text, #ff0 yellow for accents like headers), using a monospace font like 'Courier New'. Keep it simple, clean, and functional—no JavaScript, images (unless absolutely necessary and sourced externally), or external libraries. Focus on semantic HTML5 elements and CSS3 for responsiveness and effects.
 Project Structure (Separate Files)
 Organize the project into separate files for maintainability. Use the following structure:
 
@@ -55,13 +55,13 @@ Place a minimalistic footer menu on every page for quick jumps.
 Use <footer> with a smaller <nav> inside: Horizontal list of links (same as main nav: Home, About, Events, Contact).
 Style: Smaller font (0.9em), centered, with green links. On mobile, allow wrapping or stacking if needed.
 Functionality: Provides "quick jumps" to other pages without scrolling back to the header. Add a subtle border-top (green dashed) for separation.
-Include a copyright notice below the menu, e.g., "© 2025 DBBP - Društvo Bistroumnih Bitij Pan-galaksije. Vse pravice pridržane." (with English equivalent on EN pages).
+Include a copyright notice below the menu, e.g., "© 2025 DBBP42 - Društvo Brihtnih Bitij Pan-galaxije 42. Vse pravice pridržane." (with English equivalent on EN pages).
 
 Page Content Guidelines
 
 Header (All Pages):
 <h1> with "Ne Paničari!!!" (or "Don't Panic!!!") in yellow, with blinking cursor.
-Association name below: "Društvo Bistroumnih Bitij Pan-galaksije - DBBP".
+Association name below: "Društvo Brihtnih Bitij Pan-galaxije 42 - DBBP42".
 Language toggle button.
 Main navigation.
 
@@ -70,11 +70,11 @@ Use <main> with max-width 800px, centered.
 Sections with <h2> for subsections (yellow headers).
 Sample content (populate with placeholders; actual content can be added later):
 Home: Welcome message about the association (e.g., "A society for bright minds exploring the pan-galaxy.").
-About: Description of DBBP's mission, inspired by Hitchhiker's themes.
+About: Description of DBBP42's mission, inspired by Hitchhiker's themes.
 Events: List of upcoming events (use <ul> or simple table).
 Contact: Form placeholders (but since no JS, just email links or static info).
 
-Translate all content to Slovenian in -slo.html files (e.g., use accurate translations like "Dobrodošli v DBBP").
+Translate all content to Slovenian in -slo.html files (e.g., use accurate translations like "Dobrodošli v DBBP42").
 
 Footer: Mini nav + copyright.
 

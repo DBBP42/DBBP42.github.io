@@ -3,8 +3,8 @@ Slovenija v letu 2025 stoji na razpotju priložnosti. Kljub močnim temeljem –
 To je operativni načrt za preobrazbo v boljši jutri. Kot horizontalna mreža državljanov, navdihnjena z modernimi trendi kot so open-source skupnosti (npr. GitHub za sodelovanje, 100 mio uporabnikov 2025) in EU iniciative za digitalno participacijo (EU Digital Identity Wallet 2024, cilj 80 % digitalizacije do 2030), predlagamo 9 reform, ki bodo Slovenijo naredile za zgled Evrope: svobodno, samozadostno in človeško. Moderni trend: Uporaba blockchaina za transparentnost (e-Estonia, zmanjšanje korupcije za 30 %, Harvard 2016, posodobljeno 2025).
 Ta whitepaper zajema osnove vseh 9 reform z dejstvi, časovnico in povezavami za celostno razumevanje.
 
-#1. Osnova svobode – Temeljni dohodek 600 €
-Vsak polnoletni državljan prejme 600 €/mesec brez pogojev od 2027, za dijake in študente od 16. leta 300 €. To zagotavlja dostojno življenje, zmanjšuje revščino in spodbuja inovacije.
+#1. Osnova svobode – Temeljni dohodek 369 €
+Vsak polnoletni državljan prejme 369 €/mesec brez pogojev od 2027, za dijake in študente od 16. leta 190 €. To zagotavlja dostojno življenje, zmanjšuje revščino in spodbuja inovacije.
 Financiranje (skupaj 12–14 mrd €/leto):
 • Zaplenjeno premoženje iz korupcije (1,5–2,5 mrd €/leto, KPK 2025; double-check: CPI rank 36 globalno kaže velik potencial).
 • Davek na legalizirano konopljo (400–600 mio €/leto, po modelu Kolorada, kumulativni prihodek 2,87 mrd $ od 2014, CDOR 2024).
