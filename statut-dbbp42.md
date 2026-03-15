@@ -1,3 +1,5 @@
+# DBBP42 Statut
+
 # STATUT DRUŠTVA BRIHTNIH BITIJ PAN-GALAKSIJE 42
 
 Na podlagi Zakona o društvih (Uradni list RS, št. 64/11 – uradno prečiščeno besedilo in 21/18 – ZNOrg) je zbor članov dne _____________ sprejel naslednji
@@ -484,6 +486,11 @@ _______________________________
 | 1. | | | |
 | 2. | | | |
 | 3. | | | |
+| 4. | | | |
+| 5. | | | |
+| 6. | | | |
+| 7. | | | |
+| 8. | | | |
 
 ### Priloga 2: Zapisnik ustanovnega zbora
 
